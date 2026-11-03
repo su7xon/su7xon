@@ -163,7 +163,7 @@
       <img src="assets/stats.png" width="440" alt="GitHub Stats" />
     </td>
     <td align="center" valign="top">
-      <img src="assets/langs.svg" width="360" alt="Top Languages" />
+      <img src="assets/langs.png" width="360" alt="Top Languages" />
     </td>
   </tr>
 </table>

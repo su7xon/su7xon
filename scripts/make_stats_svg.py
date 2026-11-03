@@ -27,8 +27,17 @@ LANGS = [
 
 
 def stats_bg_data():
-    """Base64 JPEG used as the card's inner background artwork."""
-    path = os.path.abspath(os.path.join(ASSETS, "stats-bg.jpg"))
+    """Base64 JPEG used as the stats card's inner background artwork."""
+    return _bg_data("stats-bg.jpg")
+
+
+def langs_bg_data():
+    """Base64 JPEG used as the languages card's inner background artwork."""
+    return _bg_data("langs-bg.jpg")
+
+
+def _bg_data(filename):
+    path = os.path.abspath(os.path.join(ASSETS, filename))
     if not os.path.exists(path):
         return None
     with open(path, "rb") as f:
@@ -77,10 +86,27 @@ def stats_svg():
 def langs_svg():
     w, h = 360, 230
     total = sum(v for _, v, _ in LANGS) or 1
+    bg = langs_bg_data()
     p = []
     p.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" font-family="Fira Code, ui-monospace, monospace">')
-    p.append(f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="12" fill="#0a0a0a" stroke="#ef4444" stroke-width="1.5"/>')
-    p.append(f'<text x="22" y="36" fill="#ef4444" font-size="17" font-weight="700">Most Used Languages</text>')
+    p.append("<defs>")
+    p.append(f'<clipPath id="card"><rect x="1" y="1" width="{w-2}" height="{h-2}" rx="12"/></clipPath>')
+    p.append('<filter id="soft" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.6"/></filter>')
+    p.append('<filter id="tshadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="1" stdDeviation="2.2" flood-color="#000000" flood-opacity="0.9"/></filter>')
+    p.append('<linearGradient id="shade" x1="0" y1="0" x2="0" y2="1">')
+    p.append('<stop offset="0" stop-color="#0a0a0a" stop-opacity="0.8"/>')
+    p.append('<stop offset="0.45" stop-color="#0a0a0a" stop-opacity="0.68"/>')
+    p.append('<stop offset="1" stop-color="#0a0a0a" stop-opacity="0.8"/>')
+    p.append("</linearGradient>")
+    p.append("</defs>")
+    p.append(f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="12" fill="#0a0a0a"/>')
+    if bg:
+        p.append(
+            f'<image x="0" y="0" width="{w}" height="{h}" preserveAspectRatio="xMidYMid slice" '
+            f'clip-path="url(#card)" filter="url(#soft)" href="data:image/jpeg;base64,{bg}"/>'
+        )
+        p.append(f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="12" fill="url(#shade)"/>')
+    p.append(f'<text x="22" y="36" fill="#ef4444" font-size="17" font-weight="700" filter="url(#tshadow)">Most Used Languages</text>')
     # stacked bar
     x = 22
     bar_w = w - 44
@@ -93,9 +119,10 @@ def langs_svg():
     y = 104
     for name, v, color in LANGS:
         p.append(f'<circle cx="28" cy="{y-4}" r="5" fill="{color}"/>')
-        p.append(f'<text x="44" y="{y}" fill="#f3f4f6" font-size="13">{name}</text>')
-        p.append(f'<text x="{w-22}" y="{y}" fill="#9ca3af" font-size="12" text-anchor="end">{v:.2f}%</text>')
+        p.append(f'<text x="44" y="{y}" fill="#f3f4f6" font-size="13" filter="url(#tshadow)">{name}</text>')
+        p.append(f'<text x="{w-22}" y="{y}" fill="#e5e7eb" font-size="12" text-anchor="end" filter="url(#tshadow)">{v:.2f}%</text>')
         y += 25
+    p.append(f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="12" fill="none" stroke="#ef4444" stroke-width="1.5"/>')
     p.append("</svg>")
     return "\n".join(p)
 
@@ -114,19 +141,18 @@ def _browser_exe():
     return None
 
 
-def render_stats_png(scale=2):
-    """Rasterize stats.svg to PNG.
+def render_png(svg_name, png_name, w, h, scale=2):
+    """Rasterize a card SVG to PNG.
 
     GitHub blocks data: images inside committed SVGs, so the profile uses the
     rendered PNG instead (all the artwork stays baked into the pixels).
     """
     exe = _browser_exe()
     if not exe:
-        print("skip stats.png render (no headless browser found)")
+        print(f"skip {png_name} render (no headless browser found)")
         return
-    w, h = 440, 230
-    svg_path = os.path.abspath(os.path.join(ASSETS, "stats.svg")).replace(os.sep, "/")
-    out = os.path.abspath(os.path.join(ASSETS, "stats.png"))
+    svg_path = os.path.abspath(os.path.join(ASSETS, svg_name)).replace(os.sep, "/")
+    out = os.path.abspath(os.path.join(ASSETS, png_name))
     html = (
         "<!doctype html><html><head><meta charset='utf-8'/>"
         "<style>html,body{margin:0;padding:0;background:transparent}"
@@ -166,7 +192,8 @@ def main():
         with open(path, "w", encoding="utf-8") as f:
             f.write(content)
         print(f"Wrote {path}")
-    render_stats_png()
+    render_png("stats.svg", "stats.png", 440, 230)
+    render_png("langs.svg", "langs.png", 360, 230)
 
 
 if __name__ == "__main__":

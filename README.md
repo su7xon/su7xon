@@ -102,47 +102,53 @@
 <p align="center"><b>Core Programming Languages</b></p>
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=py,ts,js,html,css,cpp,java&theme=dark" width="100%" alt="Languages" />
+    <img src="https://skillicons.dev/icons?i=py,ts,js,html,css,cpp,java&theme=dark" width="380" alt="Languages" />
   </a>
 </p>
 
 <p align="center"><b>Frontend &amp; Mobile Development</b></p>
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,bootstrap,flutter&theme=dark" width="100%" alt="Frontend and Mobile" />
+    <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,bootstrap,flutter&theme=dark" width="280" alt="Frontend and Mobile" />
   </a>
 </p>
 
 <p align="center"><b>Backend, Cloud &amp; Databases</b></p>
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nodejs,express,flask,mongodb,mysql,firebase,aws,docker&theme=dark" width="100%" alt="Backend and Databases" />
+    <img src="https://skillicons.dev/icons?i=nodejs,express,flask,mongodb,mysql,firebase,aws,docker&theme=dark" width="430" alt="Backend and Databases" />
   </a>
 </p>
 
 <p align="center"><b>AI, Data Science, Hardware &amp; DevOps</b></p>
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=opencv,arduino,git,github,postman,linux,figma&theme=dark" width="100%" alt="Tools and AI" />
+    <img src="https://skillicons.dev/icons?i=opencv,arduino,git,github,postman,linux,figma&theme=dark" width="380" alt="Tools and AI" />
   </a>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/pandas-0a0a0a?style=for-the-badge&logo=pandas&logoColor=EF4444" alt="Pandas" />
-  <img src="https://img.shields.io/badge/scikit--learn-0a0a0a?style=for-the-badge&logo=scikit-learn&logoColor=EF4444" alt="Scikit-Learn" />
-  <img src="https://img.shields.io/badge/Seaborn-0a0a0a?style=for-the-badge&logo=python&logoColor=EF4444" alt="Seaborn" />
-  <img src="https://img.shields.io/badge/Selenium-0a0a0a?style=for-the-badge&logo=selenium&logoColor=EF4444" alt="Selenium" />
+  <img src="https://img.shields.io/badge/pandas-0a0a0a?style=flat-square&logo=pandas&logoColor=EF4444" alt="Pandas" />
+  <img src="https://img.shields.io/badge/scikit--learn-0a0a0a?style=flat-square&logo=scikit-learn&logoColor=EF4444" alt="Scikit-Learn" />
+  <img src="https://img.shields.io/badge/Seaborn-0a0a0a?style=flat-square&logo=python&logoColor=EF4444" alt="Seaborn" />
+  <img src="https://img.shields.io/badge/Selenium-0a0a0a?style=flat-square&logo=selenium&logoColor=EF4444" alt="Selenium" />
 </p>
 
 <h2 align="center">GitHub Analytics &amp; Activity</h2>
 
-<p align="center">
-  <img src="https://github-readme-stats-fast.vercel.app/api?username=su7xon&show_icons=true&bg_color=0a0a0a&title_color=ef4444&text_color=f3f4f6&icon_color=ef4444&border_color=ef4444&border_radius=8" width="100%" alt="GitHub Stats" />
-  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=su7xon&layout=compact&bg_color=0a0a0a&title_color=ef4444&text_color=f3f4f6&border_color=ef4444&border_radius=8" width="100%" alt="Top Languages" />
-</p>
+<table align="center" border="0">
+  <tr>
+    <td align="center" valign="top">
+      <img src="assets/stats.svg" width="440" alt="GitHub Stats" />
+    </td>
+    <td align="center" valign="top">
+      <img src="assets/langs.svg" width="360" alt="Top Languages" />
+    </td>
+  </tr>
+</table>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=su7xon&theme=blood&hide_border=false&border=ef4444&background=0a0a0a&ring=ef4444&fire=ef4444&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=ef4444&sideLabels=ef4444&dates=999999" width="100%" alt="GitHub Streak" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=su7xon&theme=blood&hide_border=false&border=ef4444&background=0a0a0a&ring=ef4444&fire=ef4444&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=ef4444&sideLabels=ef4444&dates=999999" width="480" alt="GitHub Streak" />
 </p>
 
 <p align="center">

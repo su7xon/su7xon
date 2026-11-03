@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="230" viewBox="0 0 440 230" font-family="Fira Code, ui-monospace, monospace">
+<rect x="1" y="1" width="438" height="228" rx="12" fill="#0a0a0a" stroke="#ef4444" stroke-width="1.5"/>
+<text x="22" y="36" fill="#ef4444" font-size="17" font-weight="700">su7xon's GitHub Stats</text>
+<text x="22" y="70" fill="#ef4444" font-size="14">★</text>
+<text x="44" y="70" fill="#f3f4f6" font-size="13">Total Stars Earned:</text>
+<text x="280" y="70" fill="#f3f4f6" font-size="13" font-weight="700" text-anchor="end">8</text>
+<text x="22" y="98" fill="#ef4444" font-size="14">◷</text>
+<text x="44" y="98" fill="#f3f4f6" font-size="13">Total Commits:</text>
+<text x="280" y="98" fill="#f3f4f6" font-size="13" font-weight="700" text-anchor="end">310</text>
+<text x="22" y="126" fill="#ef4444" font-size="14">⑂</text>
+<text x="44" y="126" fill="#f3f4f6" font-size="13">Total PRs:</text>
+<text x="280" y="126" fill="#f3f4f6" font-size="13" font-weight="700" text-anchor="end">12</text>
+<text x="22" y="154" fill="#ef4444" font-size="14">◉</text>
+<text x="44" y="154" fill="#f3f4f6" font-size="13">Total Issues:</text>
+<text x="280" y="154" fill="#f3f4f6" font-size="13" font-weight="700" text-anchor="end">5</text>
+<text x="22" y="182" fill="#ef4444" font-size="14">▣</text>
+<text x="44" y="182" fill="#f3f4f6" font-size="13">Contributed to:</text>
+<text x="280" y="182" fill="#f3f4f6" font-size="13" font-weight="700" text-anchor="end">6</text>
+<circle cx="368" cy="122" r="44" fill="none" stroke="#3a1515" stroke-width="7"/>
+<circle cx="368" cy="122" r="44" fill="none" stroke="#ef4444" stroke-width="7" stroke-dasharray="230 360" stroke-linecap="round" transform="rotate(-90 368 122)"/>
+<text x="368" y="130" fill="#f3f4f6" font-size="20" font-weight="700" text-anchor="middle">A+</text>
+</svg>

@@ -5,6 +5,7 @@ from datetime import date, timedelta
 
 DATA = os.path.join(os.path.dirname(__file__), "..", "data", "contributions.json")
 OUT = os.path.join(os.path.dirname(__file__), "..", "contrib-heatmap.svg")
+TOTAL_OVERRIDE = os.environ.get("TOTAL_OVERRIDE")
 
 PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353", "#69f0a0"]
 
@@ -59,8 +60,9 @@ def main():
 """)
     parts.append("</style>")
 
-    # title
-    parts.append(f'<text x="{LEFT}" y="24" fill="#c9d1d9" font-size="13" font-weight="600">{stats["total"]:,} contributions in the last year</text>')
+    # title (TOTAL_OVERRIDE lets you show a custom headline number)
+    display_total = int(TOTAL_OVERRIDE) if TOTAL_OVERRIDE else stats["total"]
+    parts.append(f'<text x="{LEFT}" y="24" fill="#c9d1d9" font-size="13" font-weight="600">{display_total:,} contributions in the last year</text>')
 
     # weekday labels
     for r in range(7):

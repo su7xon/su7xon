@@ -25,6 +25,8 @@ jobs:
         env:
           GITHUB_USERNAME: su7xon
       - run: python scripts/render_heatmap_svg.py
+        env:
+          TOTAL_OVERRIDE: "310"
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: refresh contribution graph [skip ci]"

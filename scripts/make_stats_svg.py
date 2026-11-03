@@ -23,6 +23,16 @@ LANGS = [
     ("HTML", 5.0, "#e34c26"),
     ("CSS", 3.0, "#563d7c"),
 ]
+
+STREAK = {
+    "total": "164",
+    "total_label": "Total Contributions",
+    "total_range": "Apr 15, 2025 - Present",
+    "current": "1",
+    "current_date": "Nov 3",
+    "longest": "5",
+    "longest_range": "Jul 1, 2025 - Jul 5, 2025",
+}
 # ---------------------------------------
 
 
@@ -54,9 +64,9 @@ def stats_svg():
     p.append('<filter id="soft" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.6"/></filter>')
     p.append('<filter id="tshadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="1" stdDeviation="2.2" flood-color="#000000" flood-opacity="0.9"/></filter>')
     p.append('<linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">')
-    p.append('<stop offset="0" stop-color="#0a0a0a" stop-opacity="0.9"/>')
-    p.append('<stop offset="0.55" stop-color="#0a0a0a" stop-opacity="0.84"/>')
-    p.append('<stop offset="1" stop-color="#0a0a0a" stop-opacity="0.58"/>')
+    p.append('<stop offset="0" stop-color="#0a0a0a" stop-opacity="0.82"/>')
+    p.append('<stop offset="0.55" stop-color="#0a0a0a" stop-opacity="0.74"/>')
+    p.append('<stop offset="1" stop-color="#0a0a0a" stop-opacity="0.46"/>')
     p.append("</linearGradient>")
     p.append("</defs>")
     p.append(f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="12" fill="#0a0a0a"/>')
@@ -94,9 +104,9 @@ def langs_svg():
     p.append('<filter id="soft" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.6"/></filter>')
     p.append('<filter id="tshadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="1" stdDeviation="2.2" flood-color="#000000" flood-opacity="0.9"/></filter>')
     p.append('<linearGradient id="shade" x1="0" y1="0" x2="0" y2="1">')
-    p.append('<stop offset="0" stop-color="#0a0a0a" stop-opacity="0.8"/>')
-    p.append('<stop offset="0.45" stop-color="#0a0a0a" stop-opacity="0.68"/>')
-    p.append('<stop offset="1" stop-color="#0a0a0a" stop-opacity="0.8"/>')
+    p.append('<stop offset="0" stop-color="#0a0a0a" stop-opacity="0.68"/>')
+    p.append('<stop offset="0.45" stop-color="#0a0a0a" stop-opacity="0.56"/>')
+    p.append('<stop offset="1" stop-color="#0a0a0a" stop-opacity="0.68"/>')
     p.append("</linearGradient>")
     p.append("</defs>")
     p.append(f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="12" fill="#0a0a0a"/>')
@@ -122,6 +132,62 @@ def langs_svg():
         p.append(f'<text x="44" y="{y}" fill="#f3f4f6" font-size="13" filter="url(#tshadow)">{name}</text>')
         p.append(f'<text x="{w-22}" y="{y}" fill="#e5e7eb" font-size="12" text-anchor="end" filter="url(#tshadow)">{v:.2f}%</text>')
         y += 25
+    p.append(f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="12" fill="none" stroke="#ef4444" stroke-width="1.5"/>')
+    p.append("</svg>")
+    return "\n".join(p)
+
+
+def streak_svg():
+    w, h = 560, 220
+    bg = _bg_data("streak-bg.jpg")
+    p = []
+    p.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" font-family="Fira Code, ui-monospace, monospace">')
+    p.append("<defs>")
+    p.append(f'<clipPath id="card"><rect x="1" y="1" width="{w-2}" height="{h-2}" rx="12"/></clipPath>')
+    p.append('<filter id="soft" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.6"/></filter>')
+    p.append('<filter id="tshadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="1" stdDeviation="2.2" flood-color="#000000" flood-opacity="0.9"/></filter>')
+    p.append('<linearGradient id="shade" x1="0" y1="0" x2="0" y2="1">')
+    p.append('<stop offset="0" stop-color="#0a0a0a" stop-opacity="0.72"/>')
+    p.append('<stop offset="0.5" stop-color="#0a0a0a" stop-opacity="0.62"/>')
+    p.append('<stop offset="1" stop-color="#0a0a0a" stop-opacity="0.78"/>')
+    p.append("</linearGradient>")
+    p.append("</defs>")
+    p.append(f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="12" fill="#0a0a0a"/>')
+    if bg:
+        p.append(
+            f'<image x="0" y="0" width="{w}" height="{h}" preserveAspectRatio="xMidYMin slice" '
+            f'clip-path="url(#card)" filter="url(#soft)" href="data:image/jpeg;base64,{bg}"/>'
+        )
+        p.append(f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="12" fill="url(#shade)"/>')
+
+    cols = [w / 6, w / 2, w * 5 / 6]
+
+    # vertical dividers
+    for dx in (w / 3, w * 2 / 3):
+        p.append(f'<line x1="{dx:.1f}" y1="34" x2="{dx:.1f}" y2="{h-34}" stroke="#f3f4f6" stroke-opacity="0.22" stroke-width="1.5"/>')
+
+    # column 1 - total contributions
+    p.append(f'<text x="{cols[0]:.1f}" y="98" fill="#f3f4f6" font-size="42" font-weight="700" text-anchor="middle" filter="url(#tshadow)">{STREAK["total"]}</text>')
+    p.append(f'<text x="{cols[0]:.1f}" y="132" fill="#ef4444" font-size="14" font-weight="600" text-anchor="middle" filter="url(#tshadow)">{STREAK["total_label"]}</text>')
+    p.append(f'<text x="{cols[0]:.1f}" y="162" fill="#c9ccd1" font-size="11.5" text-anchor="middle" filter="url(#tshadow)">{STREAK["total_range"]}</text>')
+
+    # column 2 - current streak (with flame)
+    fx, fy = cols[1], 44
+    p.append(
+        f'<path transform="translate({fx - 9:.1f},{fy - 22:.1f}) scale(0.9)" fill="#ef4444" filter="url(#tshadow)" '
+        'd="M10 0c1.6 3.2 0 5.2-1.4 7.1-1.6 2.1-3.4 4.3-3.4 7.4 0 4.4 3.4 7.5 7.3 7.5 4.2 0 7.5-3.2 7.5-7.8 0-3.4-1.7-6.2-3.6-8.3C14.8 4 12.7 2.3 10 0z"/>'
+        f'<path transform="translate({fx - 4:.1f},{fy - 12:.1f}) scale(0.62)" fill="#fca5a5" '
+        'd="M10 0c1.2 2.6 0 4.2-1.1 5.7-1.2 1.6-2.5 3.3-2.5 5.7 0 3.4 2.6 5.8 5.6 5.8 3.2 0 5.8-2.5 5.8-6 0-2.6-1.3-4.8-2.8-6.4C13.7 3.1 12.1 1.8 10 0z"/>'
+    )
+    p.append(f'<text x="{cols[1]:.1f}" y="98" fill="#f3f4f6" font-size="42" font-weight="700" text-anchor="middle" filter="url(#tshadow)">{STREAK["current"]}</text>')
+    p.append(f'<text x="{cols[1]:.1f}" y="132" fill="#ef4444" font-size="14" font-weight="600" text-anchor="middle" filter="url(#tshadow)">Current Streak</text>')
+    p.append(f'<text x="{cols[1]:.1f}" y="162" fill="#c9ccd1" font-size="11.5" text-anchor="middle" filter="url(#tshadow)">{STREAK["current_date"]}</text>')
+
+    # column 3 - longest streak
+    p.append(f'<text x="{cols[2]:.1f}" y="98" fill="#f3f4f6" font-size="42" font-weight="700" text-anchor="middle" filter="url(#tshadow)">{STREAK["longest"]}</text>')
+    p.append(f'<text x="{cols[2]:.1f}" y="132" fill="#ef4444" font-size="14" font-weight="600" text-anchor="middle" filter="url(#tshadow)">Longest Streak</text>')
+    p.append(f'<text x="{cols[2]:.1f}" y="162" fill="#c9ccd1" font-size="11.5" text-anchor="middle" filter="url(#tshadow)">{STREAK["longest_range"]}</text>')
+
     p.append(f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="12" fill="none" stroke="#ef4444" stroke-width="1.5"/>')
     p.append("</svg>")
     return "\n".join(p)
@@ -187,13 +253,14 @@ def render_png(svg_name, png_name, w, h, scale=2):
 
 def main():
     os.makedirs(os.path.abspath(ASSETS), exist_ok=True)
-    for name, content in [("stats.svg", stats_svg()), ("langs.svg", langs_svg())]:
+    for name, content in [("stats.svg", stats_svg()), ("langs.svg", langs_svg()), ("streak.svg", streak_svg())]:
         path = os.path.abspath(os.path.join(ASSETS, name))
         with open(path, "w", encoding="utf-8") as f:
             f.write(content)
         print(f"Wrote {path}")
     render_png("stats.svg", "stats.png", 440, 230)
     render_png("langs.svg", "langs.png", 360, 230)
+    render_png("streak.svg", "streak.png", 560, 220)
 
 
 if __name__ == "__main__":

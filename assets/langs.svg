@@ -4,9 +4,9 @@
 <filter id="soft" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.6"/></filter>
 <filter id="tshadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="1" stdDeviation="2.2" flood-color="#000000" flood-opacity="0.9"/></filter>
 <linearGradient id="shade" x1="0" y1="0" x2="0" y2="1">
-<stop offset="0" stop-color="#0a0a0a" stop-opacity="0.8"/>
-<stop offset="0.45" stop-color="#0a0a0a" stop-opacity="0.68"/>
-<stop offset="1" stop-color="#0a0a0a" stop-opacity="0.8"/>
+<stop offset="0" stop-color="#0a0a0a" stop-opacity="0.68"/>
+<stop offset="0.45" stop-color="#0a0a0a" stop-opacity="0.56"/>
+<stop offset="1" stop-color="#0a0a0a" stop-opacity="0.68"/>
 </linearGradient>
 </defs>
 <rect x="1" y="1" width="358" height="228" rx="12" fill="#0a0a0a"/>

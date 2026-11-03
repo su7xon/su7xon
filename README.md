@@ -169,11 +169,15 @@
 </table>
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=su7xon&theme=blood&hide_border=false&border=ef4444&background=0a0a0a&ring=ef4444&fire=ef4444&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=ef4444&sideLabels=ef4444&dates=999999" width="480" alt="GitHub Streak" />
+  <img src="assets/streak.png" width="560" alt="GitHub Streak" />
 </p>
 
 <p align="center">
   <img src="assets/quote.svg" width="100%" alt="Code and Art Quote" />
+</p>
+
+<p align="center">
+  <img src="assets/pc-wallpaper.gif" width="640" alt="PC Wallpaper loop" />
 </p>
 
 <h2 align="center">Contribution Journey</h2>

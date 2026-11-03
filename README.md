@@ -160,7 +160,7 @@
 <table align="center" border="0">
   <tr>
     <td align="center" valign="top">
-      <img src="assets/stats.svg" width="440" alt="GitHub Stats" />
+      <img src="assets/stats.png" width="440" alt="GitHub Stats" />
     </td>
     <td align="center" valign="top">
       <img src="assets/langs.svg" width="360" alt="Top Languages" />

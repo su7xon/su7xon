@@ -1,6 +1,8 @@
 """Generate compact red/black GitHub stats + languages cards."""
 import base64
 import os
+import subprocess
+import tempfile
 
 ASSETS = os.path.join(os.path.dirname(__file__), "..", "assets")
 
@@ -43,9 +45,9 @@ def stats_svg():
     p.append('<filter id="soft" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.6"/></filter>')
     p.append('<filter id="tshadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="1" stdDeviation="2.2" flood-color="#000000" flood-opacity="0.9"/></filter>')
     p.append('<linearGradient id="shade" x1="0" y1="0" x2="1" y2="0">')
-    p.append('<stop offset="0" stop-color="#0a0a0a" stop-opacity="0.88"/>')
-    p.append('<stop offset="0.55" stop-color="#0a0a0a" stop-opacity="0.78"/>')
-    p.append('<stop offset="1" stop-color="#0a0a0a" stop-opacity="0.46"/>')
+    p.append('<stop offset="0" stop-color="#0a0a0a" stop-opacity="0.9"/>')
+    p.append('<stop offset="0.55" stop-color="#0a0a0a" stop-opacity="0.84"/>')
+    p.append('<stop offset="1" stop-color="#0a0a0a" stop-opacity="0.58"/>')
     p.append("</linearGradient>")
     p.append("</defs>")
     p.append(f'<rect x="1" y="1" width="{w-2}" height="{h-2}" rx="12" fill="#0a0a0a"/>')
@@ -98,6 +100,65 @@ def langs_svg():
     return "\n".join(p)
 
 
+def _browser_exe():
+    candidates = [
+        r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe",
+        r"C:\Program Files\Microsoft\Edge\Application\msedge.exe",
+        r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+        "/usr/bin/microsoft-edge",
+        "/usr/bin/google-chrome",
+    ]
+    for c in candidates:
+        if os.path.exists(c):
+            return c
+    return None
+
+
+def render_stats_png(scale=2):
+    """Rasterize stats.svg to PNG.
+
+    GitHub blocks data: images inside committed SVGs, so the profile uses the
+    rendered PNG instead (all the artwork stays baked into the pixels).
+    """
+    exe = _browser_exe()
+    if not exe:
+        print("skip stats.png render (no headless browser found)")
+        return
+    w, h = 440, 230
+    svg_path = os.path.abspath(os.path.join(ASSETS, "stats.svg")).replace(os.sep, "/")
+    out = os.path.abspath(os.path.join(ASSETS, "stats.png"))
+    html = (
+        "<!doctype html><html><head><meta charset='utf-8'/>"
+        "<style>html,body{margin:0;padding:0;background:transparent}"
+        f"img{{display:block;width:{w * scale}px;height:{h * scale}px}}"
+        "</style></head><body>"
+        f"<img src='file:///{svg_path}'/>"
+        "</body></html>"
+    )
+    with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False, encoding="utf-8") as f:
+        f.write(html)
+        html_path = f.name
+    try:
+        subprocess.run(
+            [
+                exe,
+                "--headless=new",
+                "--disable-gpu",
+                "--hide-scrollbars",
+                "--default-background-color=00000000",
+                "--virtual-time-budget=4000",
+                f"--screenshot={out}",
+                f"--window-size={w * scale},{h * scale}",
+                f"file:///{html_path.replace(os.sep, '/')}",
+            ],
+            check=True,
+            capture_output=True,
+        )
+        print(f"Wrote {out}")
+    finally:
+        os.remove(html_path)
+
+
 def main():
     os.makedirs(os.path.abspath(ASSETS), exist_ok=True)
     for name, content in [("stats.svg", stats_svg()), ("langs.svg", langs_svg())]:
@@ -105,6 +166,7 @@ def main():
         with open(path, "w", encoding="utf-8") as f:
             f.write(content)
         print(f"Wrote {path}")
+    render_stats_png()
 
 
 if __name__ == "__main__":

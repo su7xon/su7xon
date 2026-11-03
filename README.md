@@ -3,6 +3,10 @@
 </p>
 
 <p align="center">
+  <img src="assets/name.svg" width="100%" alt="su7xon Letters" />
+</p>
+
+<p align="center">
   <a href="https://github.com/su7xon">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2800&pause=1000&color=EF4444&center=true&vCenter=true&multiline=false&width=620&height=42&lines=Hi+there!+I'm+su7xon+%F0%9F%91%8B;Developer+%26+Builder+%F0%9F%92%BB;AI+%26+Automation+Explorer+%F0%9F%A4%96;Turning+ideas+into+production+code+%E2%9A%A1" width="100%" alt="Typing SVG" />
   </a>
@@ -146,6 +150,10 @@
 </p>
 
 <h2 align="center">Contribution Journey</h2>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/su7xon/su7xon/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Contribution Snake" />
+</p>
 
 <p align="center">
   <img src="./contrib-heatmap.svg" width="100%" alt="Contribution Heatmap" />

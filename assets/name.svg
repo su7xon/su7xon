@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="160" viewBox="0 0 1200 160" font-family="Fira Code, ui-monospace, SFMono-Regular, Menlo, monospace">
+  <style>
+    @keyframes popIn {
+      0% { opacity: 0; transform: translateY(18px) scale(0.85); }
+      70% { opacity: 1; transform: translateY(-3px) scale(1.03); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes scan {
+      0% { transform: translateX(-120px); opacity: 0; }
+      20% { opacity: 1; }
+      100% { transform: translateX(1120px); opacity: 0; }
+    }
+    .letter { animation: popIn 0.55s cubic-bezier(.2,.8,.2,1) both; transform-box: fill-box; transform-origin: center; }
+    .scan { animation: scan 4.5s linear infinite; }
+  </style>
+  <defs>
+    <linearGradient id="scanGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ef4444" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="160" fill="#0a0a0a"/>
+  <rect x="0" y="0" width="1200" height="160" fill="none" stroke="#ef4444" stroke-opacity="0.25"/>
+  <rect class="scan" x="40" y="124" width="120" height="2" fill="url(#scanGrad)"/>
+
+  <g>
+    <g class="letter" style="animation-delay:0.05s">
+      <rect x="290" y="32" width="86" height="86" rx="12" fill="#111827" stroke="#ef4444" stroke-width="2"/>
+      <text x="333" y="90" fill="#f3f4f6" font-size="46" font-weight="700" text-anchor="middle">s</text>
+    </g>
+    <g class="letter" style="animation-delay:0.20s">
+      <rect x="390" y="32" width="86" height="86" rx="12" fill="#111827" stroke="#ef4444" stroke-width="2"/>
+      <text x="433" y="90" fill="#f3f4f6" font-size="46" font-weight="700" text-anchor="middle">u</text>
+    </g>
+    <g class="letter" style="animation-delay:0.35s">
+      <rect x="490" y="32" width="86" height="86" rx="12" fill="#ef4444" stroke="#ef4444" stroke-width="2"/>
+      <text x="533" y="90" fill="#0a0a0a" font-size="46" font-weight="700" text-anchor="middle">7</text>
+    </g>
+    <g class="letter" style="animation-delay:0.50s">
+      <rect x="590" y="32" width="86" height="86" rx="12" fill="#111827" stroke="#ef4444" stroke-width="2"/>
+      <text x="633" y="90" fill="#f3f4f6" font-size="46" font-weight="700" text-anchor="middle">x</text>
+    </g>
+    <g class="letter" style="animation-delay:0.65s">
+      <rect x="690" y="32" width="86" height="86" rx="12" fill="#111827" stroke="#ef4444" stroke-width="2"/>
+      <text x="733" y="90" fill="#f3f4f6" font-size="46" font-weight="700" text-anchor="middle">o</text>
+    </g>
+    <g class="letter" style="animation-delay:0.80s">
+      <rect x="790" y="32" width="86" height="86" rx="12" fill="#111827" stroke="#ef4444" stroke-width="2"/>
+      <text x="833" y="90" fill="#f3f4f6" font-size="46" font-weight="700" text-anchor="middle">n</text>
+    </g>
+  </g>
+  <text x="600" y="146" fill="#6b7280" font-size="11" text-anchor="middle" letter-spacing="3">BUILD · SHIP · REPEAT</text>
+</svg>

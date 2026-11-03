@@ -10,7 +10,7 @@ import requests
 
 USERNAME = os.environ.get("GITHUB_USERNAME", "su7xon")
 URL = f"https://github.com/{USERNAME}.png?size=700"
-OUT = os.path.join(os.path.dirname(__file__), "..", "assets", "hero.svg")
+OUT = os.path.join(os.path.dirname(__file__), "..", "assets", "hero-v2.svg")
 
 W, H = 1200, 560
 IMG_X, IMG_Y, IMG_S = 60, 50, 460
@@ -145,6 +145,36 @@ def main():
     <rect width="186" height="30" rx="15" fill="#111827" stroke="#ef4444" stroke-opacity="0.6"/>
     <circle cx="18" cy="15" r="4" fill="#22c55e"/>
     <text x="32" y="20" fill="#d1d5db" font-size="12">open to collaborate</text>
+  </g>
+
+  <!-- roaming dot critter + trail -->
+  <g opacity="0.55">
+    <circle r="2.5" fill="#ef4444">
+      <animateMotion dur="16s" repeatCount="indefinite" begin="-0.45s" path="M 80 528 C 220 506 320 548 460 528 S 700 506 840 528 S 1040 548 1130 522"/>
+    </circle>
+    <circle r="2" fill="#ef4444">
+      <animateMotion dur="16s" repeatCount="indefinite" begin="-0.9s" path="M 80 528 C 220 506 320 548 460 528 S 700 506 840 528 S 1040 548 1130 522"/>
+    </circle>
+    <circle r="1.6" fill="#ef4444">
+      <animateMotion dur="16s" repeatCount="indefinite" begin="-1.35s" path="M 80 528 C 220 506 320 548 460 528 S 700 506 840 528 S 1040 548 1130 522"/>
+    </circle>
+  </g>
+
+  <g>
+    <animateMotion dur="16s" repeatCount="indefinite" path="M 80 528 C 220 506 320 548 460 528 S 700 506 840 528 S 1040 548 1130 522"/>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 -4;0 0" dur="0.7s" repeatCount="indefinite"/>
+      <ellipse cx="0" cy="15" rx="12" ry="3.5" fill="#000000" opacity="0.45"/>
+      <circle cx="0" cy="-16" r="2.5" fill="#f87171"/>
+      <rect x="-17" y="-10" width="34" height="4" rx="2" fill="#ef4444"/>
+      <rect x="-15" y="-10" width="30" height="24" rx="10" fill="#ef4444"/>
+      <circle cx="-6" cy="-1" r="2.6" fill="#0a0a0a"/>
+      <circle cx="6" cy="-1" r="2.6" fill="#0a0a0a"/>
+      <circle cx="-6" cy="-1.5" r="1" fill="#ffffff"/>
+      <circle cx="6" cy="-1.5" r="1" fill="#ffffff"/>
+      <rect x="-7" y="14" width="5" height="5" rx="2" fill="#ef4444"/>
+      <rect x="2" y="14" width="5" height="5" rx="2" fill="#ef4444"/>
+    </g>
   </g>
 </svg>
 '''

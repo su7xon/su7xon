@@ -3,6 +3,10 @@
 </p>
 
 <p align="center">
+  <img src="assets/pc-wallpaper.gif" width="640" alt="PC Wallpaper loop" />
+</p>
+
+<p align="center">
   <a href="https://github.com/su7xon">
     <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2800&pause=1000&color=EF4444&center=true&vCenter=true&multiline=false&width=680&height=42&lines=Hi+there!+I'm+Harshit+Singh+%F0%9F%91%8B;Full+Stack+Developer+%F0%9F%92%BB;5x+Hackathon+Winner+%F0%9F%8F%86;AI%2C+GenAI+%26+n8n+Explorer+%F0%9F%A4%96;Turning+ideas+into+production+code+%E2%9A%A1" width="100%" alt="Typing SVG" />
   </a>

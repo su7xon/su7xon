@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="assets/avatar.svg" width="230" alt="su7xon Profile Picture" />
+</p>
+
+<p align="center">
   <img src="assets/header.svg" width="100%" alt="su7xon Header" />
 </p>
 

@@ -120,18 +120,24 @@ def main():
 
   <!-- right side text -->
   <text x="580" y="118" fill="#6b7280" font-size="13">~/harshit $ whoami</text>
-  <g fill="#f3f4f6" font-size="64" font-weight="700" text-anchor="middle">
-    <text class="letter" style="animation-delay:2.55s" x="600" y="190">s</text>
-    <text class="letter" style="animation-delay:2.62s" x="640" y="190">u</text>
-    <text class="letter" style="animation-delay:2.69s" x="680" y="190" fill="#ef4444">7</text>
-    <text class="letter" style="animation-delay:2.76s" x="720" y="190">x</text>
-    <text class="letter" style="animation-delay:2.83s" x="760" y="190">o</text>
-    <text class="letter" style="animation-delay:2.90s" x="800" y="190">n</text>
-    <rect class="cursor" x="826" y="145" width="12" height="52" fill="#ef4444"/>
+  <g fill="#f3f4f6" font-size="60" font-weight="700">
+    <text class="letter" style="animation-delay:2.55s" x="580" y="186">H</text>
+    <text class="letter" style="animation-delay:2.60s" x="617.5" y="186">a</text>
+    <text class="letter" style="animation-delay:2.65s" x="655" y="186">r</text>
+    <text class="letter" style="animation-delay:2.70s" x="692.5" y="186">s</text>
+    <text class="letter" style="animation-delay:2.75s" x="730" y="186">h</text>
+    <text class="letter" style="animation-delay:2.80s" x="767.5" y="186">i</text>
+    <text class="letter" style="animation-delay:2.85s" x="805" y="186">t</text>
+    <text class="letter" style="animation-delay:2.95s" x="880" y="186">S</text>
+    <text class="letter" style="animation-delay:3.00s" x="917.5" y="186">i</text>
+    <text class="letter" style="animation-delay:3.05s" x="955" y="186">n</text>
+    <text class="letter" style="animation-delay:3.10s" x="992.5" y="186">g</text>
+    <text class="letter" style="animation-delay:3.15s" x="1030" y="186">h</text>
+    <rect class="cursor" x="1072" y="144" width="11" height="48" fill="#ef4444"/>
   </g>
-  <text x="580" y="228" fill="#f3f4f6" font-size="22" font-weight="700">Harshit Singh</text>
-  <text x="580" y="254" fill="#ef4444" font-size="15" font-weight="600">Full Stack Developer · AI &amp; ML · GenAI</text>
-  <text x="580" y="280" fill="#9ca3af" font-size="13">AI can't replace thinking — it can only replace typing.</text>
+  <text x="580" y="222" fill="#ef4444" font-size="22" font-weight="700" letter-spacing="1">@su7xon</text>
+  <text x="580" y="252" fill="#ef4444" font-size="15" font-weight="600">Full Stack Developer · AI &amp; ML · GenAI</text>
+  <text x="580" y="278" fill="#9ca3af" font-size="13">AI can't replace thinking — it can only replace typing.</text>
 
   <rect x="580" y="305" width="540" height="1" fill="#ef4444" fill-opacity="0.35"/>
 

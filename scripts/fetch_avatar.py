@@ -22,6 +22,15 @@ def main():
     b64 = base64.b64encode(r.content).decode("ascii")
     pic = f'data:image/png;base64,{b64}'
 
+    # alternating red/white letters for the handle
+    handle_parts = []
+    for i, ch in enumerate("@su7xon"):
+        color = "#ef4444" if i % 2 == 1 else "#f3f4f6"
+        handle_parts.append(
+            f'    <text x="{580 + i * 14.2:.1f}" y="222" fill="{color}">{ch}</text>'
+        )
+    handle_svg = "\n".join(handle_parts)
+
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" font-family="Fira Code, ui-monospace, SFMono-Regular, Menlo, monospace">
   <style>
     @keyframes popIn {{
@@ -135,7 +144,9 @@ def main():
     <text class="letter" style="animation-delay:3.15s" x="1030" y="186">h</text>
     <rect class="cursor" x="1072" y="144" width="11" height="48" fill="#ef4444"/>
   </g>
-  <text x="580" y="222" fill="#ef4444" font-size="22" font-weight="700" letter-spacing="1">@su7xon</text>
+  <g font-size="22" font-weight="700">
+{handle_svg}
+  </g>
   <text x="580" y="252" fill="#ef4444" font-size="15" font-weight="600">Full Stack Developer · AI &amp; ML · GenAI</text>
   <text x="580" y="278" fill="#9ca3af" font-size="13">AI can't replace thinking — it can only replace typing.</text>
 

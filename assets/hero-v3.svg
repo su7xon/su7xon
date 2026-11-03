@@ -111,7 +111,15 @@
     <text class="letter" style="animation-delay:3.15s" x="1030" y="186">h</text>
     <rect class="cursor" x="1072" y="144" width="11" height="48" fill="#ef4444"/>
   </g>
-  <text x="580" y="222" fill="#ef4444" font-size="22" font-weight="700" letter-spacing="1">@su7xon</text>
+  <g font-size="22" font-weight="700">
+    <text x="580.0" y="222" fill="#f3f4f6">@</text>
+    <text x="594.2" y="222" fill="#ef4444">s</text>
+    <text x="608.4" y="222" fill="#f3f4f6">u</text>
+    <text x="622.6" y="222" fill="#ef4444">7</text>
+    <text x="636.8" y="222" fill="#f3f4f6">x</text>
+    <text x="651.0" y="222" fill="#ef4444">o</text>
+    <text x="665.2" y="222" fill="#f3f4f6">n</text>
+  </g>
   <text x="580" y="252" fill="#ef4444" font-size="15" font-weight="600">Full Stack Developer · AI &amp; ML · GenAI</text>
   <text x="580" y="278" fill="#9ca3af" font-size="13">AI can't replace thinking — it can only replace typing.</text>
 

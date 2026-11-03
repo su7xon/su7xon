@@ -6,7 +6,7 @@
 <br><br>
 
 <h3><code>su7xon@github ~ $ whoami</code></h3>
-<img src="./info-card.svg" width="490" alt="info card" />
+<img src="./info-card-v2.svg" width="490" alt="info card" />
 
 <br><br>
 

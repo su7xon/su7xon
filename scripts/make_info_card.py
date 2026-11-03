@@ -3,7 +3,7 @@ import os
 import sys
 from xml.sax.saxutils import escape
 
-OUT = os.path.join(os.path.dirname(__file__), "..", "info-card.svg")
+OUT = os.path.join(os.path.dirname(__file__), "..", "info-card-v2.svg")
 STATIC = os.environ.get("STATIC") == "1"
 
 # ---- edit these to tell your story ----

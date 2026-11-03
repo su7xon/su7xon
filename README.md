@@ -101,6 +101,12 @@
   </tr>
 </table>
 
+<h2 align="center">Currently Building</h2>
+
+<p align="center">
+  <img src="assets/building.svg" width="100%" alt="Currently building NeuroKoon" />
+</p>
+
 <h2 align="center">Featured Project Spotlight</h2>
 
 <table width="100%" border="0" align="center">
@@ -184,6 +190,10 @@
 
 <p align="center">
   <img src="./contrib-heatmap.svg" width="100%" alt="Contribution Heatmap" />
+</p>
+
+<p align="center">
+  <img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D Contribution Graph" />
 </p>
 
 <h2 align="center">Let's Connect &amp; Collaborate</h2>

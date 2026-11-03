@@ -1,6 +1,7 @@
 """Generate a neofetch-style info card SVG."""
 import os
 import sys
+from xml.sax.saxutils import escape
 
 OUT = os.path.join(os.path.dirname(__file__), "..", "info-card.svg")
 STATIC = os.environ.get("STATIC") == "1"
@@ -35,7 +36,7 @@ def main():
     lines.append(f'<circle cx="16" cy="15" r="5" fill="#ff5f56"/>')
     lines.append(f'<circle cx="32" cy="15" r="5" fill="#ffbd2e"/>')
     lines.append(f'<circle cx="48" cy="15" r="5" fill="#27c93f"/>')
-    lines.append(f'<text x="{W//2}" y="20" fill="#8b949e" font-size="12" text-anchor="middle">{TITLE}</text>')
+    lines.append(f'<text x="{W//2}" y="20" fill="#8b949e" font-size="12" text-anchor="middle">{escape(TITLE)}</text>')
 
     y = 56
     # neofetch-style ascii-ish header
@@ -48,8 +49,8 @@ def main():
         cls = "" if STATIC else 'class="row"'
         style = "" if STATIC else f' style="animation-delay:{delay}s; opacity:0;"'
         lines.append(f'<g {cls}{style}>')
-        lines.append(f'<text x="20" y="{y}" fill="#58a6ff" font-size="12" font-weight="600">{k}:</text>')
-        lines.append(f'<text x="110" y="{y}" fill="#c9d1d9" font-size="12">{v}</text>')
+        lines.append(f'<text x="20" y="{y}" fill="#58a6ff" font-size="12" font-weight="600">{escape(k)}:</text>')
+        lines.append(f'<text x="110" y="{y}" fill="#c9d1d9" font-size="12">{escape(v)}</text>')
         lines.append("</g>")
         y += 22
 

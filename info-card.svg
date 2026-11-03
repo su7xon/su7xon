@@ -14,11 +14,11 @@
 <text x="20" y="72" fill="#8b949e" font-size="11">--------------</text>
 <g class="row" style="animation-delay:0.0s; opacity:0;">
 <text x="20" y="92" fill="#58a6ff" font-size="12" font-weight="600">Now:</text>
-<text x="110" y="92" fill="#c9d1d9" font-size="12">Building cool stuff & learning in public</text>
+<text x="110" y="92" fill="#c9d1d9" font-size="12">Building cool stuff &amp; learning in public</text>
 </g>
 <g class="row" style="animation-delay:0.18s; opacity:0;">
 <text x="20" y="114" fill="#58a6ff" font-size="12" font-weight="600">Prev:</text>
-<text x="110" y="114" fill="#c9d1d9" font-size="12">Exploring open source & side projects</text>
+<text x="110" y="114" fill="#c9d1d9" font-size="12">Exploring open source &amp; side projects</text>
 </g>
 <g class="row" style="animation-delay:0.36s; opacity:0;">
 <text x="20" y="136" fill="#58a6ff" font-size="12" font-weight="600">Stack:</text>

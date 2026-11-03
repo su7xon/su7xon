@@ -43,7 +43,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status- _Building_%26_Shipping-111111?style=flat-square" alt="Status" />
+  <img src="https://img.shields.io/badge/Status-Building_%26_Shipping-111111?style=flat-square" alt="Status" />
   <img src="https://img.shields.io/badge/Focus-Full_Stack_%26_AI-DC2626?style=flat-square" alt="Focus" />
   <img src="https://img.shields.io/badge/Base-Haldwani%2C_India-111111?style=flat-square" alt="Base" />
 </p>

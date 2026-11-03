@@ -1,16 +1,19 @@
 <p align="center">
-  <img src="assets/hero-v2.svg" width="100%" alt="su7xon Profile Picture" />
+  <img src="assets/hero-v3.svg" width="100%" alt="su7xon Profile Picture" />
 </p>
 
 <p align="center">
   <a href="https://github.com/su7xon">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2800&pause=1000&color=EF4444&center=true&vCenter=true&multiline=false&width=620&height=42&lines=Hi+there!+I'm+su7xon+%F0%9F%91%8B;Developer+%26+Builder+%F0%9F%92%BB;AI+%26+Automation+Explorer+%F0%9F%A4%96;Turning+ideas+into+production+code+%E2%9A%A1" width="100%" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=19&duration=2800&pause=1000&color=EF4444&center=true&vCenter=true&multiline=false&width=680&height=42&lines=Hi+there!+I'm+Harshit+Singh+%F0%9F%91%8B;Full+Stack+Developer+%F0%9F%92%BB;5x+Hackathon+Winner+%F0%9F%8F%86;AI%2C+GenAI+%26+n8n+Explorer+%F0%9F%A4%96;Turning+ideas+into+production+code+%E2%9A%A1" width="100%" alt="Typing SVG" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/su7xon" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-Follow-111111?style=for-the-badge&logo=github&logoColor=EF4444&labelColor=0a0a0a" alt="GitHub" />
+  </a>
+  <a href="https://linkedin.com/in/harshit-singh-6b2177362" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-DC2626?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0a0a0a" alt="LinkedIn" />
   </a>
   <a href="mailto:ayushsingh0p08@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact-DC2626?style=for-the-badge&logo=gmail&logoColor=white&labelColor=0a0a0a" alt="Email" />
@@ -38,18 +41,19 @@
 </p>
 
 <p align="center">
-  Hey! I'm <b>su7xon</b>, a passionate <b>developer and builder</b> based in Haldwani, India.<br />
-  I build full-stack web apps, automation tools, and AI-powered experiments — with a soft spot for clean interfaces and things that actually ship.
+  Hey! I'm <b>Harshit Singh</b> (<b>@su7xon</b>), a <b>Full Stack Developer</b> and Computer Science engineer based in Haldwani, Uttarakhand, India.<br />
+  I build full-stack web platforms, AI/ML &amp; GenAI tools, blockchain experiments, and n8n automations — currently interning at <b>L&amp;T Technology Services</b>.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Building_%26_Shipping-111111?style=flat-square" alt="Status" />
-  <img src="https://img.shields.io/badge/Focus-Full_Stack_%26_AI-DC2626?style=flat-square" alt="Focus" />
+  <img src="https://img.shields.io/badge/Intern_%40_L%26T-DC2626?style=flat-square" alt="Intern at L&T" />
+  <img src="https://img.shields.io/badge/5x-Hackathon_Winner-111111?style=flat-square" alt="5x Hackathon Winner" />
+  <img src="https://img.shields.io/badge/Focus-Full_Stack_%26_AI-111111?style=flat-square" alt="Focus" />
   <img src="https://img.shields.io/badge/Base-Haldwani%2C_India-111111?style=flat-square" alt="Base" />
 </p>
 
 <p align="center">
-  <b>Let's Discuss:</b> Python, TypeScript, JavaScript, React, Node.js, Docker &amp; Git workflows.<br />
+  <b>Let's Discuss:</b> Full Stack, AI/ML, GenAI, Blockchain, n8n &amp; Open Source.<br />
   <b>Philosophy:</b> <i>"AI can't replace thinking — it can only replace typing."</i>
 </p>
 
@@ -72,6 +76,23 @@
     <td width="50%" align="center">
       <h4>Collaboration</h4>
       <p><b>AI, Web &amp; Automation</b><br /><sub>Open to exciting new projects</sub></p>
+    </td>
+  </tr>
+</table>
+
+<h2 align="center">Experience &amp; Achievements</h2>
+
+<table width="100%" border="0" align="center">
+  <tr>
+    <td width="50%" align="center">
+      <h4>Experience</h4>
+      <p><b>Intern @ L&amp;T Technology Services</b><br /><sub>Backend Developer Intern · 2026 – Present</sub></p>
+      <p><b>Ex-SDE @ Aspia Infotech</b><br /><sub>Full Stack Development</sub></p>
+    </td>
+    <td width="50%" align="center">
+      <h4>Achievements</h4>
+      <p><b>5x Hackathon Winner</b><br /><sub>SIH 2025 Finalist · IDE Bootcamp 2026 Winner</sub></p>
+      <p><b>Open Source Contributor</b><br /><sub>GSSoC · Building NeuroKoon</sub></p>
     </td>
   </tr>
 </table>
@@ -186,13 +207,13 @@
       <sub><b>Direct Collaboration</b></sub>
     </td>
     <td align="center" width="220">
-      <a href="https://github.com/su7xon?tab=repositories" target="_blank">
-        <img src="https://skillicons.dev/icons?i=git" width="60" height="60" alt="Repositories" />
+      <a href="https://linkedin.com/in/harshit-singh-6b2177362" target="_blank">
+        <img src="https://skillicons.dev/icons?i=linkedin" width="60" height="60" alt="LinkedIn" />
         <br /><br />
-        <img src="https://img.shields.io/badge/Repositories-Explore-DC2626?style=for-the-badge&logo=github&logoColor=white&labelColor=0a0a0a" alt="Repositories" />
+        <img src="https://img.shields.io/badge/LinkedIn-Connect-DC2626?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0a0a0a" alt="LinkedIn" />
       </a>
       <br />
-      <sub><b>Everything I've Built</b></sub>
+      <sub><b>Professional Network</b></sub>
     </td>
   </tr>
 </table>

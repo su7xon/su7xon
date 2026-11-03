@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/avatar.svg" width="100%" alt="su7xon Profile Picture" />
+  <img src="assets/hero.svg" width="100%" alt="su7xon Profile Picture" />
 </p>
 
 <p align="center">

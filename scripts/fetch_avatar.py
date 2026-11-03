@@ -10,7 +10,7 @@ import requests
 
 USERNAME = os.environ.get("GITHUB_USERNAME", "su7xon")
 URL = f"https://github.com/{USERNAME}.png?size=700"
-OUT = os.path.join(os.path.dirname(__file__), "..", "assets", "avatar.svg")
+OUT = os.path.join(os.path.dirname(__file__), "..", "assets", "hero.svg")
 
 W, H = 1200, 560
 IMG_X, IMG_Y, IMG_S = 60, 50, 460

@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <img src="assets/pc-wallpaper-spin.gif" width="540" alt="Spinning circular wallpaper loop" />
+  <img src="assets/showcase-spin.gif" width="520" alt="Spinning showcase loop" />
 </p>
 
 <p align="center">
